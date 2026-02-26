@@ -1,4 +1,4 @@
-# Task 1
+# Task 1: OOP-based application development
 
 ## Objective
 The goal for Task 1 is to build the core classes and basic functionality. Specifically, we aim to:
