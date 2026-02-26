@@ -1,4 +1,4 @@
-# Task 1: [Name of Feature/Module for Task 1]
+# Task 1
 
 ## Objective
 The goal for Task 1 is to build the core classes and basic functionality. Specifically, we aim to:
