@@ -2,9 +2,9 @@
 # OOP Real-Life Problem Solver
 
 ## Group Members
-- Name (Leader) - Matric/Student ID
-- Name - Matric/Student ID
-- Name - Matric/Student ID
+- Name (Leader) - Rachel
+- Name - Aron
+- Name - Haruka
 
 ## Project Overview
 This repository contains our group project for the Object-Oriented Programming course. We are solving the problem of **[Briefly state the real-life problem, e.g., managing a small library's inventory, a simple banking system, a student course registration system]**.
