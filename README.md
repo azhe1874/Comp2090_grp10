@@ -16,7 +16,10 @@ Small warehouse operators often rely on manual methods (spreadsheets or paper re
 - Lack of visibility on low-stock items
 
 ## Proposed Solution
-[Explain how your software will solve this problem. Mention the key features.]
+Our Warehouse Management System (WMS) addresses these challenges through an intuitive GUI application that:
+- 
+- 
+- 
 
 ## OOP Concepts Utilized
 - **Encapsulation:** [Briefly explain where you will use it, e.g., in the `Book` class to protect attributes.]
