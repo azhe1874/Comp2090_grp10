@@ -1,10 +1,7 @@
-# Task 1: OOP-based application development
+# Task 1
 
 ## Objective
-The goal for Task 1 is to build the core classes and basic functionality. Specifically, we aim to:
-- Implement the base classes (e.g., `Person`, `Item`).
-- Set up the main data structures.
-- Allow for basic user input/output for a single use case.
+This project aims to develop a Graphical Warehouse Management System (WMS) to solve inventory tracking challenges by applying core Object-Oriented Programming (OOP) principles.
 
 ## Classes Implemented
 - **Class A:** [Description of its attributes and methods. How does it use OOP?]
