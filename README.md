@@ -11,9 +11,9 @@ We are developing a Warehouse Management System with a Graphical User Interface 
 
 ## Problem Statement
 Small warehouse operators often rely on manual methods (spreadsheets or paper records) to manage inventory, leading to:
--Human errors in data entry
--Inefficient order processing
--Lack of visibility on low-stock items
+- Human errors in data entry
+- Inefficient order processing
+- Lack of visibility on low-stock items
 
 ## Proposed Solution
 [Explain how your software will solve this problem. Mention the key features.]
