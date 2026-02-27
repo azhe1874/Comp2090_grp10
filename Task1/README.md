@@ -18,7 +18,8 @@ This project aims to develop a Graphical Warehouse Management System (WMS) to so
 - Error handling is minimal.
 - The user interface is command-line based.
 
-## Next Steps (for Task 2)
-- Implement inheritance by creating subclasses.
-- Add persistence (save/load data).
-- Improve the user interface.
+## OOP Concepts Utilized
+- **Encapsulation:** [Briefly explain where you will use it, e.g., in the `Book` class to protect attributes.]
+- **Inheritance:** [e.g., `User` class as a parent for `Student` and `Teacher` classes.]
+- **Polymorphism:** [e.g., Different implementations of the `calculateFees()` method.]
+- **Abstraction:** [e.g., Using interfaces or abstract classes to define contracts.]
