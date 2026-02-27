@@ -10,7 +10,10 @@
 We are developing a Warehouse Management System with a Graphical User Interface (GUI) to help small to medium-sized warehouses efficiently manage their inventory.
 
 ## Problem Statement
-[Explain the real-life problem in 2-3 sentences. Who is affected? Why is it a problem?]
+Small warehouse operators often rely on manual methods (spreadsheets or paper records) to manage inventory, leading to:
+-Human errors in data entry
+-Inefficient order processing
+-Lack of visibility on low-stock items
 
 ## Proposed Solution
 [Explain how your software will solve this problem. Mention the key features.]
