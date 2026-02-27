@@ -7,7 +7,7 @@
 - Name - Haruka
 
 ## Project Overview
-We are developing a Warehouse Management System with a Graphical User Interface (GUI) to help small to medium-sized warehouses efficiently manage their inventory, track stock levels, and process orders.
+We are developing a Warehouse Management System with a Graphical User Interface (GUI) to help small to medium-sized warehouses efficiently manage their inventory.
 
 ## Problem Statement
 [Explain the real-life problem in 2-3 sentences. Who is affected? Why is it a problem?]
