@@ -7,16 +7,16 @@
 - [Task2](#task_two)
 
 
-## <a name="group_members">:Group Members
+## <a name="group_members">Group Members
 - Name (Leader) - Rachel
 - Name - Aron
 - Name - Haruka
 
-## <a name="project_aim">:Project Aim
+## <a name="project_aim">Project Aim
 We have two tasks for this group project. Task1 is focuses on real-life problem solving with the concept of Object-Oriented 
 Programming (OOP). Task2 is to self-study on a new data structure AND a new algorithm.
 
-## <a name="task_one">:Task1
+## <a name="task_one">Task1
 ### Project overview
 We are developing a Warehouse Management System with a Graphical User Interface (GUI) to help small to medium-sized warehouses efficiently manage their inventory.
 
@@ -34,4 +34,4 @@ Our Warehouse Management System (WMS) addresses these challenges through an intu
 - Offers search and filter capabilities for products
 - Generates low-stock alerts
 
-## <a nmae="task_two">:Task2
+## <a nmae="task_two">Task2
