@@ -1,5 +1,5 @@
 # Comp2090_grp10
-# OOP Real-Life Problem Solver
+# Warehouse management system
 
 ## Group Members
 - Name (Leader) - Rachel
@@ -7,7 +7,7 @@
 - Name - Haruka
 
 ## Project Overview
-This repository contains our group project for the Object-Oriented Programming course. We are solving the problem of **[Briefly state the real-life problem, e.g., managing a small library's inventory, a simple banking system, a student course registration system]**.
+We are developing a Warehouse Management System with a Graphical User Interface (GUI) to help small to medium-sized warehouses efficiently manage their inventory, track stock levels, and process orders.
 
 ## Problem Statement
 [Explain the real-life problem in 2-3 sentences. Who is affected? Why is it a problem?]
