@@ -16,7 +16,7 @@ Small warehouse operators often rely on manual methods (spreadsheets or paper re
 - Lack of visibility on low-stock items
 
 ## Proposed Solution
-Our Warehouse Management System (WMS) addresses these challenges through an intuitive GUI application that:
+    Our Warehouse Management System (WMS) addresses these challenges through an intuitive GUI application that:
 - 
 - 
 - 
