@@ -13,8 +13,11 @@
 - Name - Haruka
 
 ## <a name="project_aim">Project Aim
-We have two tasks for this group project. Task1 is focuses on real-life problem solving with the concept of Object-Oriented 
-Programming (OOP). Task2 is to self-study on a new data structure AND a new algorithm.
+We have two tasks for this group project. 
+
+Task1 is focuses on real-life problem solving with the concept of Object-Oriented Programming (OOP). The main objective is to design and implement a functional Warehouse Management System (WMS) with a Graphical User Interface (GUI) .
+
+Task2 is to self-study on a new data structure and a new algorithm.The findings will be applied by integrating this new knowledge into the WMS to solve a specific logistical problem, thereby demonstrating the practical benefits of advanced computational techniques in a real-world application.
 
 ## <a name="task_one">Task1
 ### Project overview
