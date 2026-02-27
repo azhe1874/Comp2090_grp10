@@ -16,10 +16,11 @@ Small warehouse operators often rely on manual methods (spreadsheets or paper re
 - Lack of visibility on low-stock items
 
 ## Proposed Solution
-    Our Warehouse Management System (WMS) addresses these challenges through an intuitive GUI application that:
-- 
-- 
-- 
+Our Warehouse Management System (WMS) addresses these challenges through an intuitive GUI application that: 
+
+- Streamlines order picking and packing
+- Generates low-stock alerts
+- Offers search and filter capabilities for products
 
 ## OOP Concepts Utilized
 - **Encapsulation:** [Briefly explain where you will use it, e.g., in the `Book` class to protect attributes.]
