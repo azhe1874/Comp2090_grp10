@@ -1,7 +1,7 @@
 # Task 1
 
 ## Objective
-This project aims to develop a Warehouse Management System (WMS) to address inventory tracking challenges. The primary objective is to design a foundational, object-oriented software model that can manage core entities like items, stock levels, users, and transactions. The focus is on applying fundamental Object-Oriented Programming (OOP) principles to create a modular, maintainable, and extensible system architecture as a preliminary step toward a full-featured application, potentially with a graphical interface later.
+This project aims to develop a Warehouse Management System (WMS) to address inventory tracking challenges. The primary objective is to design a foundational, object-oriented software model that can manage core entities like items, stock levels, users, and transactions. The focus is on applying fundamental Object-Oriented Programming (OOP) principles to create a modular, maintainable, and extensible system architecture.
 
 ## OOP Concepts Utilized
 - **Encapsulation:** This is consistently applied across all classes. Attributes like `_item_id`, `_quantity`, and `_role` are marked as private (using a leading underscore) to restrict direct access. Instead, public getter methods (e.g., `get_item_id()`) and setter methods (e.g., `set_quantity()`) are provided. This protects the integrity of the data by allowing the class to control how its attributes are viewed and modified. For example, the `set_quantity` method in the `Item` class includes a validation check to prevent the stock from being set to a negative number.
