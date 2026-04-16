@@ -17,9 +17,9 @@ A Max-Heap is stored as a plain array. For any node at index `i`:
 📺 **Watch the 5-minute introduction video here:**
 👉 [https://limewire.com/d/BEf9u#BMD7vDLfat]
 ## 👤 Author/Info
->| **Name** | [KEUNG Hoi Ching] [Lam Wai] [Wong Hiu Ching] |
->| **Student ID** | [13882355] [13877984] [13884686] |
->| **Course** | COMP8090SEF |
->| **Institution** | Hong Kong Metropolitan University (HKMU) |
+- | **Name** | [KEUNG Hoi Ching] [Lam Wai] [Wong Hiu Ching] |
+- | **Student ID** | [13882355] [13877984] [13884686] |
+- | **Course** | COMP8090SEF |
+- | **Institution** | Hong Kong Metropolitan University (HKMU) |
 
 
