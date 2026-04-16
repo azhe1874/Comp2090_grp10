@@ -1,31 +1,113 @@
 # Task 1
 
-## Objective
-This project aims to develop a Warehouse Management System (WMS) to address inventory tracking challenges. The primary objective is to design a foundational, object-oriented software model that can manage core entities like items, stock levels, users, and transactions. The focus is on applying fundamental Object-Oriented Programming (OOP) principles to create a modular, maintainable, and extensible system architecture.
+# Warehouse Management System (WMS)
 
-## OOP Concepts Utilized
-- **Encapsulation:** This is consistently applied across all classes. Attributes like `_item_id`, `_quantity`, and `_role` are marked as private (using a leading underscore) to restrict direct access. Instead, public getter methods (e.g., `get_item_id()`) and setter methods (e.g., `set_quantity()`) are provided. This protects the integrity of the data by allowing the class to control how its attributes are viewed and modified. For example, the `set_quantity` method in the `Item` class includes a validation check to prevent the stock from being set to a negative number.
-- **Inheritance:** While not heavily utilized in the current implementation, the groundwork is laid. The structure suggests that future expansions could use inheritance. For instance, an `Item` class could be a parent to specialized classes like `PerishableItem` (with an added `expiry_date` attribute) or `ElectronicsItem` (with a `warranty_period`). Similarly, the `User` class is designed to be a parent, with the `role` attribute determining permissions, which could be further refined by creating `Admin` and `Staff` subclasses.
-- **Polymorphism:** The design allows for polymorphism, particularly through the `User.can_perform()` method. While not using method overriding with subclasses, the same method call (`can_perform()`) exhibits different behaviors based on the object's internal state (`_role`). An `admin` user and a `staff` user will get different results for the same action (e.g., `delete_user`). This is a form of polymorphism where objects of the same class can behave differently.
-- **Abstraction:** The system uses abstraction to hide complex implementation details behind simple interfaces. For example, to process an inventory transaction, a user only needs to create a `Transaction` object and call its `process()` method. The intricate logic of checking stock levels (for outbound), updating the `Item`'s quantity, and recording the transaction's date is all hidden within that single method. The `Transaction` class provides a clean, abstract interface for this operation.
+## Project Overview
 
-## Classes Implemented
-- **Class `Item`:** This class represents a product stored in the warehouse. Its attributes include a unique ID (`_item_id`), name (`_name`), price (`_unit_price`), and current stock level (`_quantity`). It uses encapsulation by keeping its attributes private and controlling access and modification via getters and methods like `add_quantity()` and `reduce_quantity()`. This ensures the stock level is managed safely and consistently (e.g., cannot be reduced below zero).
-- **Class `Supplier`:** This class stores information about the vendors who supply the items. It holds the supplier's ID (`_supplier_id`), name (`_name`), and contact details (`_contact`). It primarily serves as a data container with getter methods, demonstrating basic encapsulation.
-- **Class `Location`:** This class defines a specific physical storage position within a warehouse using an aisle (`_aisle`), shelf (`_shelf`), and bin (`_bin`). It is a simple class used to precisely identify where an item is stored.
-- **Class `StockRecord`:** This class establishes a relationship between an `Item`, a `Warehouse`, and a `Location`. It records the `_quantity` of a specific item at a specific spot and timestamps the last update (`_last_updated`). This allows for more granular tracking than just an item's total stock.
-- **Class `Warehouse`:** This class represents a physical warehouse location. It has an ID (`_warehouse_id`), a location description, a storage capacity, and importantly, a list of `StockRecord` objects. Its methods, `add_stock()` and `remove_stock()`, provide a high-level interface for managing inventory within that specific warehouse.
-- **Class `Transaction`:** This class models an inventory movement event. It captures the ID (`_trans_id`), the `Item` involved, the `_quantity`, the `User` who performed it, the `_type` ("in" or "out"), and the `_date`. The core logic for inbound and outbound operations is contained in its `process()` method, which updates the associated `Item`'s stock.
-- **Class `User`:** This class represents a person interacting with the WMS. It stores a user ID, name, and role. Its key method is `can_perform()`, which encapsulates the permission logic, determining if a user with a given role (`admin` or `staff`) is authorized to perform a specific action. This centralizes authorization rules within the class itself.
+The **Warehouse Management System (WMS)** is a Python-based desktop application designed to address common inventory tracking challenges faced by warehouses and distribution centers. The system provides a user-friendly graphical interface for managing stock levels, processing inbound/outbound transactions, handling suppliers, and supporting multi-warehouse operations with location-level granularity.
 
-## How to Run the Code (Preliminary)
-1.  Save the provided Python code as a file, for example, `comp2090_group10.py`.
-2.  Open a terminal or command prompt and navigate to the directory where you saved the file.
-3.  Run the script using the Python interpreter:
-    ```bash
-    python comp2090_group10.py
-    ```
-4.  The script will execute the example usage in the `if __name__ == "__main__":` block and print the results to the console. There is no interactive prompt in this preliminary version.
+The primary goal of this project is to demonstrate the application of **Object-Oriented Programming (OOP)** principles—such as encapsulation, inheritance, polymorphism, and abstraction—to create a modular, maintainable, and extensible software architecture.
+
+---
+
+## Key Features
+
+- **User Authentication & Role Management**  
+  - Admin and Staff roles with different access levels.  
+  - Secure password hashing using SHA-256.
+
+- **Inventory Management**  
+  - Add, edit, delete, and view items.  
+  - Support for **Perishable** (with expiration tracking) and **Non-Perishable** items.  
+  - Automatic low-stock alerts based on configurable thresholds.
+
+- **Warehouse & Location Management**  
+  - Multiple warehouses with capacity limits.  
+  - Fine-grained storage locations (aisle-shelf-bin).  
+  - Real-time stock tracking per location.
+
+- **Transaction Processing**  
+  - **Inbound** (receiving stock) from suppliers.  
+  - **Outbound** (shipping stock) to customers, with optional location selection or automatic location picking.  
+  - Transaction history with operator logging.
+
+- **Supplier Management**  
+  - Maintain supplier contact information and product categories.
+
+- **Reporting & Monitoring**  
+  - Dashboard with inventory summary (total items, total value, low stock count).  
+  - Recent transaction history.  
+  - Low stock alerts.
+
+---
+
+## Technology Stack
+
+| Component       | Technology                          |
+|----------------|-------------------------------------|
+| Language       | Python 3                            |
+| GUI Framework  | Tkinter / ttk                       |
+| Database       | SQLite3                             |
+| Architecture   | Model-View-Controller (MVC) pattern |
+| Authentication | SHA-256 password hashing            |
+
+---
+
+## Project Structure (Key Modules)
+
+
+---
+
+## Object-Oriented Design Highlights
+
+### 1. **Encapsulation**
+- Each class (`User`, `Item`, `Warehouse`, etc.) protects its internal state using private attributes (e.g., `_name`, `_quantity`).
+- Getter/setter methods control access to sensitive data.
+
+### 2. **Inheritance & Polymorphism**
+- `Person` abstract base class → `User` and `Supplier` concrete classes.
+- `Item` abstract base class → `PerishableItem` and `NonPerishableItem` subclasses.
+- Polymorphic methods like `get_item_type()` and `check_stock_status()` behave differently per subclass.
+
+### 3. **Abstraction**
+- Abstract methods in base classes enforce a consistent interface across all derived types.
+- The controller layer hides database and business logic complexity from the GUI.
+
+### 4. **Exception Handling**
+- Custom exceptions (`InsufficientStockError`, `InvalidOperationError`) provide meaningful error feedback.
+
+---
+
+## Database Schema (SQLite)
+
+The system uses the following main tables:
+
+- `users` – User credentials and roles.
+- `items` – Product catalog with type-specific extra data stored as JSON.
+- `warehouses` – Physical warehouse details.
+- `locations` – Storage positions within warehouses.
+- `stock_records` – Current stock levels per item/warehouse/location.
+- `transactions` – Complete audit log of all inbound/outbound movements.
+- `suppliers` – Vendor information.
+- `orders` & `order_items` – Support for purchase/sales orders (extensible).
+
+---
+
+## Setup & Installation
+
+### Prerequisites
+- Python 3.7 or higher
+- Tkinter (usually included with Python, but may need separate install on Linux)
+
+### Installation Steps
+
+1. **Clone or download** the project files into a local directory.
+
+2. **Install dependencies** (no external packages required beyond Python standard library).
+
+3. **Run the application**:
+   ```bash
+   python main.py
 
 ## Current Status / Limitations
 - The code currently handles basic object modeling and simple transaction logic for demonstration purposes. It successfully creates objects and simulates inbound/outbound operations.
