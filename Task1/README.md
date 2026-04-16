@@ -1,5 +1,3 @@
-# Task 1
-
 # Warehouse Management System (WMS)
 
 ## Project Overview
