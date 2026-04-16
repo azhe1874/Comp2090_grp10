@@ -8,9 +8,9 @@
 
 
 ## <a name="group_members">Group Members
-- Name (Leader) - Rachel
-- Name - Aron
-- Name - Haruka
+- Name (Leader) - KEUNG Hoi Ching (13882355)
+- Name - Lam Wai (13877984)
+- Name - Wong Hiu Ching (13884686)
 
 ## <a name="project_aim">Project Aim
 We have two tasks for this group project. 
