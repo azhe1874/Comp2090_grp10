@@ -111,6 +111,9 @@ The system uses the following main tables:
    ```bash
    python main.py
 
+📺 **Watch the 5-minute introduction video here:**
+👉
+
 ## Current Status / Limitations
 - The code currently handles basic object modeling and simple transaction logic for demonstration purposes. It successfully creates objects and simulates inbound/outbound operations.
 - Data is stored entirely in memory (RAM). All objects and their states are lost when the program terminates. There is no persistence to a file or database.
