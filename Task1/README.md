@@ -52,10 +52,14 @@ The primary goal of this project is to demonstrate the application of **Object-O
 | Authentication | SHA-256 password hashing            |
 
 ---
-
 ## Project Structure (Key Modules)
-
-
+├── main.py # Application entry point
+├── gui.py # Tkinter-based user interface (Views)
+├── controller.py # Business logic & transaction orchestration (Controller)
+├── models.py # OOP domain models (User, Item, Warehouse, etc.)
+├── database.py # Database initialization and connection handling
+├── utils.py # Utility functions (hashing, validation, formatting)
+└── warehouse.db # SQLite database file (auto-generated)
 ---
 
 ## Object-Oriented Design Highlights
