@@ -1,6 +1,7 @@
 # 🏭 Warehouse Management System (WMS)
-> COMP8090SEF — Data Structures, Algorithms and Problem Solving**
-> Course Project — Task 1 | HKMU Spring 2026
+> COMP8090SEF — Data Structures, Algorithms and Problem Solving
+
+**Course Project — Task 1 | HKMU Spring 2026**
 ## 📦 Project Overview
 The **Warehouse Management System (WMS)** is a desktop Python application that solves real-life inventory management challenges. It enables businesses to:
 1.	Track stock in multiple warehouses 
