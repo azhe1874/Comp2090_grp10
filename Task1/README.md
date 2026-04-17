@@ -1,122 +1,83 @@
-# Warehouse Management System (WMS)
+# 🏭 Warehouse Management System (WMS)
+> COMP8090SEF — Data Structures, Algorithms and Problem Solving**
+> Course Project — Task 1 | HKMU Spring 2026
+## 📦 Project Overview
+The **Warehouse Management System (WMS)** is a desktop Python application that solves real-life inventory management challenges. It enables businesses to:
+1.	Track stock in multiple warehouses 
+2.	Record stock incoming and outgoing 
+3.	Show low-stock warnings automatically 
+4.	Manage suppliers and user accounts with role permissions
+The app used MVC design, stores data with SQLite, has a Tkinter/ttk interface, and uses all main OOP ideas from the course.
 
-## Project Overview
+## ▶️ How to Run
+python main.py
+The application window will open automatically.
+## 🧙 First-Time Setup
+On the **very first launch**, no users exist in the database. A setup wizard will appear automatically:
+1. **Create an Admin account** (required)
+   - Enter a username, full name, contact email, and password
+2. **Create a Staff account** (optional)
+   - Leave the username blank to skip
+3. Click **"Complete Setup"**
+   - Sample data (items, suppliers, warehouse, locations) will be auto-loaded
+4. You will be redirected to the **Login screen**
+> ⚠️ Keep your admin credentials safe — there is currently no password recovery feature.
+## 📖 User Guide
+### Login
+Enter your **Username** and **Password**, then click **Login** (or press `Enter`).
+| Role | Permissions |
+| **Admin** | Full access: manage items, suppliers, users, transactions |
+| **Staff** | View inventory, process inbound/outbound transactions, view suppliers 
+### Dashboard Tab
 
-The **Warehouse Management System (WMS)** is a Python-based desktop application designed to address common inventory tracking challenges faced by warehouses and distribution centers. The system provides a user-friendly graphical interface for managing stock levels, processing inbound/outbound transactions, handling suppliers, and supporting multi-warehouse operations with location-level granularity.
+Displays a real-time summary:
+- **Total Items** in the system
+- **Total Inventory Value** (quantity × unit price)
+- **Low-Stock Alerts** — items below their minimum threshold
+- **Recent Transactions** — last 10 operations
 
-The primary goal of this project is to demonstrate the application of **Object-Oriented Programming (OOP)** principles—such as encapsulation, inheritance, polymorphism, and abstraction—to create a modular, maintainable, and extensible software architecture.
+### Inventory Tab
+| Button | Action |
+| Add Item | Opens form to create a new item |
+| Edit Item | Select a row, then click to modify name, price, or threshold |
+| Delete Item | Select a row, then click to permanently remove |
+| Refresh | Reload the list from database |
 
----
+**Item Types:**
+- **Perishable** — requires `shelf_life_days` in the Extra Data field as JSON, e.g. `{"shelf_life_days": 14}`
+- **NonPerishable** — requires `warranty_months` in the Extra Data field as JSON, e.g. `{"warranty_months": 12}`
 
-## Key Features
+### Transactions Tab
+#### Inbound (Receive Stock)
+1. Enter the **Item ID** (e.g. `I001`)
+2. Enter the **Quantity** to receive
+3. Select the **Warehouse** from the dropdown
+4. Select the **Location** (auto-populated based on warehouse)
+5. Optionally enter a **Supplier ID**
+6. Click **Process Inbound**
 
-- **User Authentication & Role Management**  
-  - Admin and Staff roles with different access levels.  
-  - Secure password hashing using SHA-256.
+#### Outbound (Ship Stock)
+1. Enter the **Item ID** and **Quantity**
+2. Select the **Warehouse**
+3. Optionally select a specific **Location** (leave blank to auto-distribute)
+4. Click **Process Outbound**
 
-- **Inventory Management**  
-  - Add, edit, delete, and view items.  
-  - Support for **Perishable** (with expiration tracking) and **Non-Perishable** items.  
-  - Automatic low-stock alerts based on configurable thresholds.
-
-- **Warehouse & Location Management**  
-  - Multiple warehouses with capacity limits.  
-  - Fine-grained storage locations (aisle-shelf-bin).  
-  - Real-time stock tracking per location.
-
-- **Transaction Processing**  
-  - **Inbound** (receiving stock) from suppliers.  
-  - **Outbound** (shipping stock) to customers, with optional location selection or automatic location picking.  
-  - Transaction history with operator logging.
-
-- **Supplier Management**  
-  - Maintain supplier contact information and product categories.
-
-- **Reporting & Monitoring**  
-  - Dashboard with inventory summary (total items, total value, low stock count).  
-  - Recent transaction history.  
-  - Low stock alerts.
-
----
-
-## Technology Stack
-
-| Component       | Technology                          |
-|----------------|-------------------------------------|
-| Language       | Python 3                            |
-| GUI Framework  | Tkinter / ttk                       |
-| Database       | SQLite3                             |
-| Architecture   | Model-View-Controller (MVC) pattern |
-| Authentication | SHA-256 password hashing            |
-
----
-## Project Structure (Key Modules)
-- main.py `Application entry point`
-- gui.py `Tkinter-based user interface (Views)`
-- controller.py `Business logic & transaction orchestration (Controller)`
-- models.py `OOP domain models (User, Item, Warehouse, etc.)`
-- database.py `Database initialization and connection handling`
-- utils.py `Utility functions (hashing, validation, formatting)`
--  warehouse.db `SQLite database file (auto-generated)`
----
-
-## Object-Oriented Design Highlights
-
-### 1. **Encapsulation**
-- Each class (`User`, `Item`, `Warehouse`, etc.) protects its internal state using private attributes (e.g., `_name`, `_quantity`).
-- Getter/setter methods control access to sensitive data.
-
-### 2. **Inheritance & Polymorphism**
-- `Person` abstract base class → `User` and `Supplier` concrete classes.
-- `Item` abstract base class → `PerishableItem` and `NonPerishableItem` subclasses.
-- Polymorphic methods like `get_item_type()` and `check_stock_status()` behave differently per subclass.
-
-### 3. **Abstraction**
-- Abstract methods in base classes enforce a consistent interface across all derived types.
-- The controller layer hides database and business logic complexity from the GUI.
-
-### 4. **Exception Handling**
-- Custom exceptions (`InsufficientStockError`, `InvalidOperationError`) provide meaningful error feedback.
+> The system will raise an error if stock is insufficient or warehouse capacity is exceeded.
 
 ---
 
-## Database Schema (SQLite)
+### Suppliers Tab *(Admin only to add)*
+**Add Supplier** — Enter Supplier ID, Name, Contact, and Categories
+- **Refresh** — Reload supplier list
 
-The system uses the following main tables:
-
-- `users` – User credentials and roles.
-- `items` – Product catalog with type-specific extra data stored as JSON.
-- `warehouses` – Physical warehouse details.
-- `locations` – Storage positions within warehouses.
-- `stock_records` – Current stock levels per item/warehouse/location.
-- `transactions` – Complete audit log of all inbound/outbound movements.
-- `suppliers` – Vendor information.
-- `orders` & `order_items` – Support for purchase/sales orders (extensible).
-
----
-
-## Setup & Installation
-
-### Prerequisites
-- Python 3.7 or higher
-- Tkinter (usually included with Python, but may need separate install on Linux)
-
-### Installation Steps
-
-1. **Clone or download** the project files into a local directory.
-
-2. **Install dependencies** (no external packages required beyond Python standard library).
-
-3. **Run the application**:
-   ```bash
-   python main.py
-
+### Users Tab *(Admin only)*
+- **Add User** — Create new Admin or Staff accounts
+- **Refresh** — Reload user list
 📺 **Watch the 5-minute introduction video here:**
 👉 [https://drive.google.com/drive/folders/1JJKPRNY5W6xoUDkxoutw_6eZFlk7nO75?usp=sharing]
+## 👤 Author/Info
+| **Name** | [KEUNG Hoi Ching] [Lam Wai] [Wong Hiu Ching] |
+| **Student ID** | [13882355] [13877984] [13884686] |
+| **Course** | COMP8090SEF |
+| **Institution** | Hong Kong Metropolitan University (HKMU) |
 
-## Current Status / Limitations
-- The code currently handles basic object modeling and simple transaction logic for demonstration purposes. It successfully creates objects and simulates inbound/outbound operations.
-- Data is stored entirely in memory (RAM). All objects and their states are lost when the program terminates. There is no persistence to a file or database.
-- Error handling is minimal. While some methods check for conditions like insufficient stock, the system lacks comprehensive `try-except` blocks to gracefully handle unexpected inputs or runtime errors.
-- The user interface is non-existent beyond a hardcoded example in the main block. It is purely a backend logic demonstration and not an interactive application.
-- The `Warehouse.add_stock()` method has a simple implementation that creates a new `StockRecord` every time, even for an item already in the warehouse. A more robust system would check for an existing record and update it, rather than creating a duplicate.
