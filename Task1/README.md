@@ -74,6 +74,7 @@ Displays a real-time summary:
 ### Users Tab *(Admin only)*
 - **Add User** — Create new Admin or Staff accounts
 - **Refresh** — Reload user list
+
 📺 **Watch the 5-minute introduction video here:**
 👉 [https://drive.google.com/drive/folders/1JJKPRNY5W6xoUDkxoutw_6eZFlk7nO75?usp=sharing]
 ## 👤 Author/Info
