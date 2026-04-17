@@ -112,7 +112,7 @@ The system uses the following main tables:
    python main.py
 
 📺 **Watch the 5-minute introduction video here:**
-👉
+👉 [https://drive.google.com/drive/folders/1JJKPRNY5W6xoUDkxoutw_6eZFlk7nO75?usp=sharing]
 
 ## Current Status / Limitations
 - The code currently handles basic object modeling and simple transaction logic for demonstration purposes. It successfully creates objects and simulates inbound/outbound operations.
