@@ -78,8 +78,8 @@ Displays a real-time summary:
 📺 **Watch the 5-minute introduction video here:**
 👉 [https://drive.google.com/drive/folders/1JJKPRNY5W6xoUDkxoutw_6eZFlk7nO75?usp=sharing]
 ## 👤 Author/Info
-| **Name** | [KEUNG Hoi Ching] [Lam Wai] [Wong Hiu Ching] |
-| **Student ID** | [13882355] [13877984] [13884686] |
-| **Course** | COMP8090SEF |
-| **Institution** | Hong Kong Metropolitan University (HKMU) |
+- **Name** | [KEUNG Hoi Ching] [Lam Wai] [Wong Hiu Ching] |
+- **Student ID** | [13882355] [13877984] [13884686] |
+- **Course** | COMP8090SEF |
+- **Institution** | Hong Kong Metropolitan University (HKMU) |
 
